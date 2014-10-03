@@ -1,4 +1,6 @@
-# Passport-Remember Me
+# Passport-Remember Me Pro
+
+This is a fork of [jaredhanson](https://github.com/jaredhanson) to which were added to a series of improvements as the passage of the request object and the possibility to use the signed cokkie instead that the cookie normal.
 
 [Passport](http://passportjs.org/) strategy for authenticating based on a
 remember me cookie.
@@ -11,7 +13,7 @@ middleware, including [Express](http://expressjs.com/).
 
 ## Install
 
-    $ npm install passport-remember-me
+    $ npm install passport-remember-me-pro
 
 ## Usage
 
@@ -42,6 +44,14 @@ next use.
         });
       }
     ));
+
+### Options strategy supported:
+
+    var strategyOptions = {
+        'key': 'remember-me-name',
+        'passReqToCallback': true,
+        'cookie': { ... }
+    };
 
 #### Authenticate Requests
 
@@ -103,21 +113,20 @@ The following list is recommended reading for understanding these risks:
 
 ## Examples
 
-For a complete, working example, refer to the [login example](https://github.com/jaredhanson/passport-remember-me/tree/master/examples/login).
+For a complete, working example, refer to the [login example](https://github.com/Lughino/passport-remember-me/tree/master/examples/login).
 
 ## Tests
 
     $ npm install
     $ make test
 
-[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-remember-me.png)](http://travis-ci.org/jaredhanson/passport-remember-me)
 
 ## Credits
 
-  - [Jared Hanson](http://github.com/jaredhanson)
+  - [Luca Pau](http://github.com/Lughino)
 
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+Copyright (c) 2014 Luca Pau
